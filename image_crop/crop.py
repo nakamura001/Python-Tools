@@ -34,7 +34,8 @@ for (root, dirs, files) in os.walk(in_dir):
     y = 0
     w = 275
     h = 320
-    box = (x, y, x+w, y+h)
+    offset_y = 224
+    box = (x, y+offset_y, x+w, y+h+offset_y)
     im2 = im.crop(box)
     draw = ImageDraw.Draw(im2)
     output_name = os.path.basename(out_file)
